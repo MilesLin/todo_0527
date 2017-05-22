@@ -12,7 +12,8 @@ export class AppComponent {
 
   add(value: string){
     var obj = {
-      todo : value
+      todo : value,
+      isCompleted : false
     };
     this.todos.push(obj);
     console.log(this.todos);
