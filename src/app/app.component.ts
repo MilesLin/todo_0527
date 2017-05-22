@@ -10,12 +10,17 @@ export class AppComponent {
   todo: string;
   todos: any[] = [];
 
-  add(value: string){
+  add(value: string) {
     var obj = {
-      todo : value,
-      isCompleted : false
+      todo: value,
+      isCompleted: false
     };
     this.todos.push(obj);
     console.log(this.todos);
+  }
+
+  delete(todo) {
+    var index = this.todos.indexOf(todo);
+    this.todos.splice(index, 1);
   }
 }
