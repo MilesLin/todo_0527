@@ -24,6 +24,10 @@ export class AppComponent {
     this.todos.splice(index, 1);
   }
 
+  clearCompleted(){
+    this.todos = this.todos.filter(x => !x.isCompleted);
+  }
+
   getItemLeft(){
 
     var isNotCompletedTodos = this.todos.filter(x => !x.isCompleted);
