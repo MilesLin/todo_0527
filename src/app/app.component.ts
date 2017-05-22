@@ -23,4 +23,11 @@ export class AppComponent {
     var index = this.todos.indexOf(todo);
     this.todos.splice(index, 1);
   }
+
+  getItemLeft(){
+
+    var isNotCompletedTodos = this.todos.filter(x => !x.isCompleted);
+
+    return isNotCompletedTodos.length;
+  }
 }
