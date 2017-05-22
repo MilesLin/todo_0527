@@ -11,7 +11,10 @@ export class AppComponent {
   todos: any[] = [];
 
   add(value: string){
-    this.todos.push(value);
+    var obj = {
+      todo : value
+    };
+    this.todos.push(obj);
     console.log(this.todos);
   }
 }
